@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% if title %}
-        <title>{{ title }} - Cooking Helper</title>
-        {% else %}
-        <title>Welcome to Cooking Helper!</title>
-        {% endif %}
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
     <h1>Hello, {{ user.username }}!</h1>
     <h1>You are in the cooking helper.</h1>
     <h2>If you are regularly thinking "What we are having for dinner (breakfast, lunch...)" and have difficulties /
         with choosing from various dishes you can cook, you might like this service...</h2>
     <h1>What can I cook... {{ kind_dict }}</h1>
-</body>
-</html>
+{% endblock %}
